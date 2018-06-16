@@ -1,0 +1,31 @@
+img{
+    width: 300px;
+    height: 300px;
+}
+
+#image{
+  text-align:justify;
+  font-size: 20px;
+  font-family: fantasy;
+  margin: auto;
+  color: Dodgerblue;
+}
+
+div{
+  padding: 20px;
+}
+
+h1{
+  background-color: skyblue;
+  padding: 20px;
+  text-align: center;
+}
+
+#heading{
+    font-family: sans-serif;
+    color: ivory;
+}
+
+#box{
+  background-color: skyblue;
+}

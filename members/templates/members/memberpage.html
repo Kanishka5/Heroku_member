@@ -1,0 +1,31 @@
+
+<head>
+  <title>Members</title>
+  {% load staticfiles %}
+  <link rel="stylesheet" type="text/css" href="{% static 'members/style.css' %}" />
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled Javascript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <h1><div id="heading">Members of CCA : </div></h1>
+  <div class="container">
+  <div class="row">
+    {% for member in all_member %}
+    <div id="image" class="col-lg-4 col-sm-6 col-xs-12">
+      <img src='{{ member.pics.url }}' class="img-thumbnail" class="img-responsive" alt="{{member.name}}" />
+      <br>
+      NAME:{{member.name}}<br>
+      CELL:{{member.cell}}
+    </div>
+    {% endfor %}
+  </div>
+  </div>
+</body>
