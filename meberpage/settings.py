@@ -25,7 +25,7 @@ SECRET_KEY = 'i0&is3q7b@*prfqr4!@=%%pmx930fu7ns91kij=#3(u45%oh+b'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['vast-brushlands-52108.herokuapp.com','127.0.0.1' ]
+ALLOWED_HOSTS = ['vast-brushlands-52108.herokuapp.com' ]
 
 
 # Application definition
@@ -43,7 +43,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
