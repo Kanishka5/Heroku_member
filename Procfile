@@ -1,1 +1,1 @@
-web: gunicorn meberpage.wsgi
+web: gunicorn dj-project.wsgi
