@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'i0&is3q7b@*prfqr4!@=%%pmx930fu7ns91kij=#3(u45%oh+b'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['vast-brushlands-52108.herokuapp.com', '127.0.0.1' ]
+ALLOWED_HOSTS = ['vast-brushlands-52108.herokuapp.com' ]
 
 
 # Application definition
