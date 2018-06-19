@@ -1,8 +1,14 @@
+adium-theme-ubuntu==0.3.4
+certifi==2018.4.16
 dj-database-url==0.5.0
-Django==1.11.13
+Django==1.9
+django-crispy-forms==1.7.2
 djangorestframework==3.8.2
 gunicorn==19.8.1
 Pillow==5.1.0
+pipenv==2018.5.18
 psycopg2==2.7.4
-pytz==2018.4
+unity-lens-photos==1.0
+virtualenv==16.0.0
+virtualenv-clone==0.3.0
 whitenoise==3.3.1
