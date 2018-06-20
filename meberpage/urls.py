@@ -25,7 +25,7 @@ from.import views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^members/', include('members.urls')),
-    url(r'^$',views.homepage),
+    url(r'^$',include('homepage.urls')),
     url(r'^memberapi/',views.MemberList.as_view())
 ]
 
