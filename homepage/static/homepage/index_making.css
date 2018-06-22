@@ -20,7 +20,7 @@
 .my-navbar{
 	border: 0;
 	border-radius: 0;
-	background: rgba(0, 0, 0, 0);
+	background: rgba(0, 0, 0, 0.5);
 }
 
 .my-navbar .navbar-right li a{
