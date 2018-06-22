@@ -137,9 +137,12 @@
      {% for member in all_member %}
      <div id="image" class="col-lg-4 col-sm-6 col-xs-12">
        <img src='{{ member.pics.url }}' class="img-thumbnail" class="img-responsive" alt="{{member.name}}" />
-       <br>
+       <div class="overlay">
+         <div class="text">
        NAME:{{member.name}}<br>
        CELL:{{member.cell}}
+     </div>
+   </div>
      </div>
      {% endfor %}
    </div>
@@ -157,9 +160,12 @@
      {% if member.cell == "WDCT" %}
      <div id="image" class="col-lg-4 col-sm-6 col-xs-12">
        <img src='{{ member.pics.url }}' class="img-thumbnail" class="img-responsive" alt="{{member.name}}" />
-       <br>
-       NAME:{{member.name}}<br>
-       CELL:{{member.cell}}
+       <div class="overlay">
+         <div class="text">
+            NAME:{{member.name}}<br>
+            CELL:{{member.cell}}
+          </div>
+        </div>
      </div>
      {% endif %}
      {% endfor %}
@@ -179,10 +185,13 @@
      {% if member.cell == "Core" %}
      <div id="image" class="col-lg-4 col-sm-6 col-xs-12">
        <img src='{{ member.pics.url }}' class="img-thumbnail" class="img-responsive" alt="{{member.name}}" />
-       <br>
-       NAME:{{member.name}}<br>
-       CELL:{{member.cell}}
-     </div>
+       <div class="overlay">
+         <div class="text">
+            NAME:{{member.name}}<br>
+            CELL:{{member.cell}}
+          </div>
+        </div>
+      </div>
      {% endif %}
      {% endfor %}
    </div>
@@ -202,9 +211,12 @@
      {% if member.cell == "Robocell" %}
      <div id="image" class="col-lg-4 col-sm-6 col-xs-12">
        <img src='{{ member.pics.url }}' class="img-thumbnail" class="img-responsive" alt="{{member.name}}" />
-       <br>
-       NAME:{{member.name}}<br>
-       CELL:{{member.cell}}
+       <div class="overlay">
+         <div class="text">
+            NAME:{{member.name}}<br>
+            CELL:{{member.cell}}
+          </div>
+        </div>
      </div>
      {% endif %}
      {% endfor %}
@@ -225,9 +237,12 @@
      {% if member.cell == "RD&I" %}
      <div id="image" class="col-lg-4 col-sm-6 col-xs-12">
        <img src='{{ member.pics.url }}' class="img-thumbnail" class="img-responsive" alt="{{member.name}}" />
-       <br>
-       NAME:{{member.name}}<br>
-       CELL:{{member.cell}}
+       <div class="overlay">
+         <div class="text">
+            NAME:{{member.name}}<br>
+            CELL:{{member.cell}}
+          </div>
+        </div>
      </div>
      {% endif %}
      {% endfor %}
@@ -249,9 +264,12 @@
      {% if member.cell == "Ecell" %}
      <div id="image" class="col-lg-4 col-sm-6 col-xs-12">
        <img src='{{ member.pics.url }}' class="img-thumbnail" class="img-responsive" alt="{{member.name}}" />
-       <br>
-       NAME:{{member.name}}<br>
-       CELL:{{member.cell}}
+       <div class="overlay">
+         <div class="text">
+            NAME:{{member.name}}<br>
+            CELL:{{member.cell}}
+          </div>
+        </div>
      </div>
      {% endif %}
      {% endfor %}
