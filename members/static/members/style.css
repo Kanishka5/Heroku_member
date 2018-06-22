@@ -6,9 +6,11 @@
 #image{
   text-align:justify;
   font-size: 20px;
-  font-family: fantasy;
+  font-family:serif;
   margin: auto;
-  color: Dodgerblue;
+  color: black;
+  margin: auto;
+  padding: 20px;
 }
 
 #members{
