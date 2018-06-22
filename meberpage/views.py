@@ -5,6 +5,7 @@ from rest_framework.response import Response
 from rest_framework import status
 from members.models import Member
 from .serializer import MemberSerializer
+from django.shortcuts import render
 
 def homepage(request):
     return HttpResponse('homepage')

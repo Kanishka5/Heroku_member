@@ -5,3 +5,6 @@ from django.shortcuts import render
 
 def home(request):
     return render(request,'homepage/index.html')
+
+def new_home(request):
+    return render(request,'homepage/index_making.html')

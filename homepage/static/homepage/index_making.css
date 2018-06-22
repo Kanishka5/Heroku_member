@@ -1,0 +1,42 @@
+#logo {
+	width: 100px;
+	height: auto;
+	position: relative;
+	z-index:25;
+	padding-top:0px;
+	padding-left: 0px;
+	top:-10px;
+}
+
+#image{
+	margin: 50px;
+}
+
+.navbar{
+	font-size: 20px;
+	padding: 10px;
+}
+
+.my-navbar{
+	border: 0;
+	border-radius: 0;
+	background: rgba(0, 0, 0, 0);
+}
+
+.my-navbar .navbar-right li a{
+	color:white;
+}
+
+.carousel-caption{
+    text-align: center;
+    color:black;
+    font-size: 30px;
+}
+
+
+#writeup{
+  text-align: center;
+  font-size: 20px;
+  padding: 20px;
+  margin:auto;
+}

@@ -26,7 +26,7 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^members/', include('members.urls')),
     url(r'^$',include('homepage.urls')),
-    url(r'^memberapi/',views.MemberList.as_view())
+    url(r'^memberapi/',views.MemberList.as_view()),
 ]
 
 urlpatterns=format_suffix_patterns(urlpatterns)
