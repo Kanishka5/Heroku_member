@@ -41,11 +41,17 @@
 
       <!-- navbar iteams right -->
       <div class="collapse navbar-collapse" id="myNavbar">
+
+        <p id="heading" class="navbar-text">
+         Members of CCA
+       </p>
+
+
         <ul class="nav navbar-nav navbar-right">
+          <li><a href="/members">Members</a></li>
           <li><a href="#">Contact Us</a></li>
           <li><a href="#">About Us</a></li>
           <li><a href="#">Cells</a></li>
-          <li><a href="/members">Members</a></li>
           <li><a href="#">Our Fest</a></li>
           <li>
 
@@ -108,20 +114,160 @@
 <script src="members/style.js"></script>
 
 <!-- cca members content -->
- <div id="heading">
-  <h1>Members of CCA  </h1>
+
+
+
+<!-- tabs -->
+<ul id="tabs" class="breadcrumb">
+ <li class="active"><a data-toggle="tab" href="#allmembers">All Members</a></li>
+ <li><a data-toggle="tab" href="#wdct">WDCT</a></li>
+ <li><a data-toggle="tab" href="#core">Core-cell</a></li>
+ <li><a data-toggle="tab" href="#robo">Robo-cell</a></li>
+  <li><a data-toggle="tab" href="#rnd">RD&I-cell</a></li>
+  <li><a data-toggle="tab" href="#ecell">E-cell</a></li>
+</ul>
+
+<div class="tab-content">
+
+  <!-- All members tab -->
+ <div id="allmembers" class="tab-pane fade in active">
+
+   <div id="members" class="container">
+   <div class="row">
+     {% for member in all_member %}
+     <div id="image" class="col-lg-4 col-sm-6 col-xs-12">
+       <img src='{{ member.pics.url }}' class="img-thumbnail" class="img-responsive" alt="{{member.name}}" />
+       <br>
+       NAME:{{member.name}}<br>
+       CELL:{{member.cell}}
+     </div>
+     {% endfor %}
+   </div>
+   </div>
+
+
+ </div>
+
+ <!-- WDCT tab -->
+ <div id="wdct" class="tab-pane fade">
+
+   <div id="members" class="container">
+   <div class="row">
+     {% for member in all_member %}
+     {% if member.cell == "WDCT" %}
+     <div id="image" class="col-lg-4 col-sm-6 col-xs-12">
+       <img src='{{ member.pics.url }}' class="img-thumbnail" class="img-responsive" alt="{{member.name}}" />
+       <br>
+       NAME:{{member.name}}<br>
+       CELL:{{member.cell}}
+     </div>
+     {% endif %}
+     {% endfor %}
+   </div>
+   </div>
+
+ </div>
+
+
+
+ <!-- Core-cell tab -->
+ <div id="core" class="tab-pane fade">
+
+   <div id="members" class="container">
+   <div class="row">
+     {% for member in all_member %}
+     {% if member.cell == "Core" %}
+     <div id="image" class="col-lg-4 col-sm-6 col-xs-12">
+       <img src='{{ member.pics.url }}' class="img-thumbnail" class="img-responsive" alt="{{member.name}}" />
+       <br>
+       NAME:{{member.name}}<br>
+       CELL:{{member.cell}}
+     </div>
+     {% endif %}
+     {% endfor %}
+   </div>
+   </div>
+
+ </div>
+
+
+
+
+ <!-- Robocell tab -->
+ <div id="robo" class="tab-pane fade">
+
+   <div id="members" class="container">
+   <div class="row">
+     {% for member in all_member %}
+     {% if member.cell == "Robocell" %}
+     <div id="image" class="col-lg-4 col-sm-6 col-xs-12">
+       <img src='{{ member.pics.url }}' class="img-thumbnail" class="img-responsive" alt="{{member.name}}" />
+       <br>
+       NAME:{{member.name}}<br>
+       CELL:{{member.cell}}
+     </div>
+     {% endif %}
+     {% endfor %}
+   </div>
+   </div>
+
+ </div>
+
+
+
+
+ <!-- RD&I-cell tab -->
+ <div id="rnd" class="tab-pane fade">
+
+   <div id="members" class="container">
+   <div class="row">
+     {% for member in all_member %}
+     {% if member.cell == "RD&I" %}
+     <div id="image" class="col-lg-4 col-sm-6 col-xs-12">
+       <img src='{{ member.pics.url }}' class="img-thumbnail" class="img-responsive" alt="{{member.name}}" />
+       <br>
+       NAME:{{member.name}}<br>
+       CELL:{{member.cell}}
+     </div>
+     {% endif %}
+     {% endfor %}
+   </div>
+   </div>
+
+ </div>
+
+
+
+
+
+ <!-- E-cell tab -->
+ <div id="ecell" class="tab-pane fade">
+
+   <div id="members" class="container">
+   <div class="row">
+     {% for member in all_member %}
+     {% if member.cell == "Ecell" %}
+     <div id="image" class="col-lg-4 col-sm-6 col-xs-12">
+       <img src='{{ member.pics.url }}' class="img-thumbnail" class="img-responsive" alt="{{member.name}}" />
+       <br>
+       NAME:{{member.name}}<br>
+       CELL:{{member.cell}}
+     </div>
+     {% endif %}
+     {% endfor %}
+   </div>
+   </div>
+
+ </div>
+
+
+
+
+
 </div>
 
-  <div id="members" class="container">
-  <div class="row">
-    {% for member in all_member %}
-    <div id="image" class="col-lg-4 col-sm-6 col-xs-12">
-      <img src='{{ member.pics.url }}' class="img-thumbnail" class="img-responsive" alt="{{member.name}}" />
-      <br>
-      NAME:{{member.name}}<br>
-      CELL:{{member.cell}}
-    </div>
-    {% endfor %}
-  </div>
-  </div>
+
+
+
+
 </body>

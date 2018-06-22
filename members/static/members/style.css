@@ -25,9 +25,7 @@
 
 #heading{
     font-family: sans-serif;
-    color: ivory;
-    background-color: skyblue;
-    padding: 20px;
+    color: black;
     text-align: center;
 }
 
@@ -50,12 +48,12 @@
 	padding: 10px;
 }
 
-.my-navbar{
-	border: 0;
-	border-radius: 0;
-	background: rgba(0, 0, 0, 0.5);
+#tabs{
+  margin-top: 80px;
 }
 
-.my-navbar .navbar-right li a{
-	color:white;
-}
+/** #navbar {
+	border: 0;
+	border-radius: 0;
+	background: rgba(0, 0, 0, 0);
+} **/
