@@ -14,7 +14,7 @@ gunicorn = "==19.8.1"
 pillow = "==5.1.0"
 "psycopg2" = "==2.7.4"
 pytz = "==2018.4"
-django-crispy-forms = "*"
+django-crispy-forms = "1.7.2"
 
 [requires]
 python_version = "2.7"
