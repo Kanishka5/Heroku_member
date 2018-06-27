@@ -1,0 +1,27 @@
+{% extends 'signup/base.html' %}
+{% block title %}Register{% endblock %}
+
+
+{% block body %}
+<!-- css -->
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'signup/signup.css' %}" />
+
+{% load crispy_forms_tags %}
+<div id="form" class="container">
+  <h2>Create new account</h2>
+  <form class="form-horizontal" action="" method="post">
+    {% csrf_token %}
+    {{ form|crispy }}
+
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="btn btn-success">Submit</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+
+
+{% endblock %}

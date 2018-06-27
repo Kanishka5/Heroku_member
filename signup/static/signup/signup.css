@@ -1,0 +1,19 @@
+#logo {
+	width: 100px;
+	height: auto;
+	position: relative;
+	z-index:25;
+	padding-top:0px;
+	padding-left: 0px;
+	top:-10px;
+}
+
+.navbar{
+	font-size: 20px;
+	padding: 10px;
+}
+
+#form{
+  padding-top: 100px;
+	width: 500px;
+}

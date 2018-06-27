@@ -23,10 +23,11 @@ from.import views
 
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
-    url(r'^members/', include('members.urls')),
-    url(r'^$',include('homepage.urls')),
-    url(r'^memberapi/',views.MemberList.as_view()),
+    url(r'^admin/', admin.site.urls, name='admin'),
+    url(r'^members/', include('members.urls'), name='meberpage'),
+    url(r'^$',include('homepage.urls'),name='homepage'),
+    url(r'^memberapi/',views.MemberList.as_view(),name='restapi'),
+    url(r'^register/',include('signup.urls'),name='register'),
 ]
 
 urlpatterns=format_suffix_patterns(urlpatterns)
