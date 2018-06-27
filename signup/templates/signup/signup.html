@@ -7,12 +7,12 @@
 {% load staticfiles %}
 <link rel="stylesheet" type="text/css" href="{% static 'signup/signup.css' %}" />
 
-{% load crispy_forms_tags %}
+<!--{% load crispy_forms_tags %} -->
 <div id="form" class="container">
   <h2>Create new account</h2>
   <form class="form-horizontal" action="" method="post">
     {% csrf_token %}
-    {{ form|crispy }}
+    {{ form }}
 
     <div class="form-group">
       <div class="col-sm-offset-2 col-sm-10">
