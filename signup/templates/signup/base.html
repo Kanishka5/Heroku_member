@@ -19,7 +19,7 @@
 
 
 <!--
-{% load crispy_forms_tags %}
+#{% load crispy_forms_tags %}
       Modal
       <div id="myModal" class="modal" role="dialog">
         <div class="modal-dialog">
@@ -33,8 +33,8 @@
           <div class="modal-body">
         sigin form
             <form class="form-horizontal" action="" method="POST">
-              {% csrf_token %}
-              {{ form|crispy }}
+              #{% csrf_token %}
+              #{{ form|crispy }}
               <div class="form-group">
                 <div class="col-sm-offset-2 col-sm-10">
                   <button type="submit" class="btn btn-default">Submit</button>
