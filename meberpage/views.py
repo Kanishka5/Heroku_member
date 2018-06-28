@@ -10,11 +10,12 @@ from django.shortcuts import render,redirect
 from django.contrib.auth import authenticate,login,get_user_model,logout
 from django.views.generic import View
 from signup.forms import UserForm,UserLoginForm
+from django.contrib import auth
 
 def logout(request):
     if request.method=='POST':
-        logout(request)
-        return redirect('index:homepage')
+        auth.logout(request)
+        return redirect('/')
 
 class MemberList(APIView):
 
@@ -38,8 +39,14 @@ def login_view(request):
             username=form.cleaned_data.get("username")
             password=form.cleaned_data.get("password")
             user = authenticate(username=username, password=password)
-            login(request, user)
-            return redirect('/')
+
+            if user is not None:
+
+                if user.is_active:
+                    login(request, user)
+                    return redirect('/')
+
+        return render(request,'signup/login.html',{'form':form})
 
     else:
         form=UserLoginForm()

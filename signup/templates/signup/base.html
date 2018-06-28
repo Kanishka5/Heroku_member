@@ -85,16 +85,16 @@
             <li><a href="#">Cells</a></li>
             <li><a href="#">Our Fest</a></li>
             <li><a href="/register">Register</a></li>
-            <li>
               {% if user.is_authenticated %}
-              <div id="name">    Hi {{ user.username }}!
+              <li> <div id="name">    Hi {{ user.username }}! </div> </li>
+              <li>
                     <form class="logout" action="/logout/" method="POST">
                       {% csrf_token %}
                       <button type="submit">Logout</button>
                     </form>
-              </div>
+              <li>
               {% else %}
-                <button type="button" class="btn btn-info btn-lg" data-target="/login">Login</button>
+                <li> <a href="/login"><button type="button" >Login</button></a> </li>
               {% endif %}
               </li>
             </ul>
