@@ -12,7 +12,8 @@
 <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'signup/base.css' %}" />
 
     <title>{% block title %} CCA {% endblock %}</title>
 
@@ -85,10 +86,16 @@
             <li><a href="#">Our Fest</a></li>
             <li><a href="/register">Register</a></li>
             <li>
-
-  <!-- Trigger the modal with a button -->
-                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Login</button>
-
+              {% if user.is_authenticated %}
+              <div id="name">    Hi {{ user.username }}!
+                    <form class="logout" action="/logout/" method="POST">
+                      {% csrf_token %}
+                      <button type="submit">Logout</button>
+                    </form>
+              </div>
+              {% else %}
+                <button type="button" class="btn btn-info btn-lg" data-target="/login">Login</button>
+              {% endif %}
               </li>
             </ul>
           </div>

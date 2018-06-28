@@ -19,7 +19,12 @@ from django.conf.urls.static import static
 from django.conf import settings
 from rest_framework.urlpatterns import format_suffix_patterns
 from.import views
+from signup.views import login_view
+from .views import logout
 
+
+
+app_name='index'
 
 
 urlpatterns = [
@@ -28,6 +33,8 @@ urlpatterns = [
     url(r'^$',include('homepage.urls'),name='homepage'),
     url(r'^memberapi/',views.MemberList.as_view(),name='restapi'),
     url(r'^register/',include('signup.urls'),name='register'),
+    url(r'^login/',views.login_view,name='login'),
+    url(r'^logout/$',views.logout,name='logout'),
 ]
 
 urlpatterns=format_suffix_patterns(urlpatterns)
